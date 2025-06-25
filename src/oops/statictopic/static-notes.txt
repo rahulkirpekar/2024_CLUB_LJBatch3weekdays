@@ -1,0 +1,79 @@
+Rules for static data members and methods in Java:
+
+---
+
+ 1. Static Data Members (Static Variables)
+
+These are class-level variables.
+
+| ------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Rule                                             | Explanation                                                                                  |
+| ------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Shared by all objects                            | All instances of the class share the same static variable. One copy for the entire class.    |
+| Memory allocated once                            | Memory for static variables is allocated only once when class is loaded.                     |
+| Can be accessed without object                   | You can access them using ClassName.staticVariable.                                          |
+| Can be accessed via object (not recommended)     | Though possible, accessing static members via object reference gives warning (bad practice). |
+| Can have default values                          | Like instance variables, they get default values (0, null, etc. if not initialized).         |
+| Cannot access non-static data directly           | Because static belongs to class, it doesn’t know which object’s non-static data to refer to. |
+| -------------------------------------------------| -------------------------------------------------------------------------------------------- |
+
+Example:
+
+java
+class Employee {
+    static String company = "ABC Corp"; // static variable
+    String name; // instance variable
+}
+
+
+---
+
+ 2.Static Methods
+| -------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Rule                                                     | Explanation                                                                             |
+| -------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Belongs to class                                         | Does not depend on object instance.                                                     |
+| Can be called without object                             | ClassName.staticMethod()                                                              |
+| Cannot access non-static (instance) members directly     | You can't access instance variables or instance methods directly inside static methods. |
+| Can access static data directly                          | Can freely access static variables and other static methods.                            |
+| No this or super keyword                                 | Since no object context, this and super cannot be used.                             |
+| Mostly used for utility/helper methods                   | Like main(), Math.sqrt(), etc.                                                      |
+| -------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+
+Example:
+
+java
+class MathUtil {
+    static int square(int x) { // static method
+        return x * x;
+    }
+}
+
+
+---
+
+ 3.When to use static
+
+✅ When value/method is common to all objects
+✅ When memory efficiency is needed
+✅ For utility/helper methods
+✅ For constants (static final)
+
+---
+
+ 4.Important Points
+
+* You can have static blocks to initialize static variables.
+* main() method is static because JVM needs entry point without object creation.
+* static final = constant (can’t be changed after initialization).
+
+Static block example:
+
+java
+class Test {
+    static int count;
+    static {
+        count = 100; // static block initializes static variable
+    }
+}
+

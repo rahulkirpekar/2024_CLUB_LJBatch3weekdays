@@ -1,0 +1,14 @@
+Runtime Polymorphism:-
+-----------------------
+
+			Person(void getBehave(){..})
+			  |
+	-----------------------------------------
+	|		  |			|
+     School		Org		       Home
+    getBehave	      getBehave		     getBehave
+	|		  |			|
+    student            Employee		      Son/Daughter
+	
+
+			

@@ -1,0 +1,21 @@
+
+			Person(getBehave())
+		  	  |
+	-----------------------------------------
+	|		  |			|
+    School               Org                   Home   
+  getResult()	     getSalary()             getMovieOnTime()
+
+   getBehave()        getBehave()            getBehave()
+	|		  |			|
+     Student 	      Employee                 Child	
+
+
+	Person person = new Org();
+	
+	person.getBehave();
+
+
+	Student student = (Student)person;// ClassCastException
+	student.getResult();
+

@@ -1,0 +1,135 @@
+Exception:- Abnormal scenario.
+------------
+		12 / 0---class--map---code crashed
+
+			Type of Exception
+			-------------------
+	1. checked			2. Unchecked
+	-------------			-------------
+
+	
+
+	Exception--checkeed			RuntimeException--Unchecked	
+	   |					    |
+	MyException				MyException
+
+
+
+	1. ArithmeticException---[12/0]
+	2. ArrayIndexoutpufBoundexception---[int a[] = new int[5];  a[5] = 10]	
+	3. NullPointerexception--
+
+		String name = null;
+		SOP(name.length());// NullPointerexception
+
+	4. StringIndexoutofboundexception
+
+		String name = "royal";
+		SOP(name.chatAt(5));
+
+	5. Numberformatexception
+
+		String value = "1a2";
+		int no = Integer.parseInt(value);// Number...
+			
+	6. classscastexception
+
+			A
+			|
+		-----------------
+		|		|
+		B		C
+
+	A obj = new B();
+	C objc = (C)obj;	
+
+
+		Type of Exception
+		-------------------
+1. checked Exception		2. Unchecked Exception	
+----------------------		----------------------
+compiletime exception		 Runtime exception
+
+
+==> IOException			==> ArithmeticException
+==> SQLException		==> ClassNotFoundException
+==> FileNotfoundException	==> NullPointerException	
+				==> StringIndexoutofboundException
+				==> ArrayIndexoutofBoundException
+				==> NumberFormateException
+-------------------------------------------------------------------------------------------------------
+
+
+			Hierarchy of Exception
+			-----------------------
+
+				Throwable(C)
+				   |
+				Exception(C)---recoverable--[exception Handling]
+				   |
+	---------------------------------------------------------
+	|--checked--Compiletime					|--Unchecked--JVM
+ --IOException						  RuntimeException	
+ --SQLException							|
+ --ClassNotFoundException				-- ArithmeticException
+							-- StringIndexoutofBoundException
+							-- NumberFormateException
+							-- NullPointerException
+							-- ArrayIndexOutofBoundException
+							-- ClasscastException
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

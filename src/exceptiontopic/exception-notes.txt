@@ -1,0 +1,41 @@
+Exception:- Abnomal Scenario
+-----------
+
+1. 
+	10 / 0 // ArithmeticException
+
+2. String name = null;
+
+	SOP(name.length());// NullpointerException
+
+3. String value = "1a2b3";
+
+	int no = Integer.parseInt(value);//  NumberFormateException
+
+4. int a[] = new int[5];// a[0],a[1],a[2],a[3],a[4]
+
+	a[5] = 10;// ArrayIndexoutofBoundException
+
+		//01234
+5. String name = "royal";
+
+	SOP(name.charAt(5));// StringIndexOutofBoundException
+
+6. 	
+		A
+		|
+	-----------------
+	|		|
+	B		C
+
+	A objA = new C();	
+
+	C objC = (B)objA;// ClasscastException
+
+
+
+
+
+
+
+

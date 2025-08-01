@@ -77,38 +77,15 @@ compiletime exception		 Runtime exception
 							-- NullPointerException
 							-- ArrayIndexOutofBoundException
 							-- ClasscastException
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
+----------------------------------------------------------------------------------
+	1. throw
+	2. throws
+	3. custom exception[User Defined Exception]
+			1. checked
+			2. unchecked
+			
+	4. method overridding with exception
+----------------------------------------------------------------------------------
 
 
 
